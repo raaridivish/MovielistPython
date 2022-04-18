@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<br><br>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+<!--    <input type="text" name="movie_name" value="{{ movie.name }}"><br><br>-->
+<!--    <input type="text" name="movie_desc" value="{{ movie.desc }}"><br><br>-->
+<!--    <input type="text" name="movie_year" value="{{ movie.year }}"><br><br>-->
+<!--    <input type="file" name="movie_img"><br><br>-->
+    <input type="submit" value="Update" class="btn btn-info">
+</form>
+{% endblock %}
